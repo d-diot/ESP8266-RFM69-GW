@@ -53,7 +53,7 @@
  */
 
 // Enable debug prints to serial monitor
-#define MY_DEBUG
+//#define MY_DEBUG
 
 // Use a bit lower baudrate for serial prints on ESP8266 than default in MyConfig.h
 #define MY_BAUD_RATE 9600
@@ -65,12 +65,13 @@
 #define MY_RFM69_IRQ_PIN D1
 #define MY_RFM69_IRQ_NUM MY_RFM69_IRQ_PIN
 #define MY_RFM69_CS_PIN D8
+#define MY_RFM69_NEW_DRIVER
 //#define MY_RFM69_RST_PIN D2
 
 #define MY_GATEWAY_ESP8266
 
-#define MY_WIFI_SSID "wifihome"
-#define MY_WIFI_PASSWORD "storagegilson"
+#define MY_WIFI_SSID "YOUR_WIFI_SSID"
+#define MY_WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 
 // Enable UDP communication
 //#define MY_USE_UDP  // If using UDP you need to set MY_CONTROLLER_IP_ADDRESS or MY_CONTROLLER_URL_ADDRESS below
@@ -80,11 +81,11 @@
 #define MY_HOSTNAME "RFM69GW"
 
 // Enable MY_IP_ADDRESS here if you want a static ip address (no DHCP)
-//#define MY_IP_ADDRESS 192,168,178,87
+//#define MY_IP_ADDRESS 192, 168, 1, 215
 
 // If using static ip you can define Gateway and Subnet address as well
-//#define MY_IP_GATEWAY_ADDRESS 192,168,178,1
-//#define MY_IP_SUBNET_ADDRESS 255,255,255,0
+//#define MY_IP_GATEWAY_ADDRESS 192, 168, 1, 1
+//#define MY_IP_SUBNET_ADDRESS 255, 255, 255, 0
 
 // The port to keep open on node server mode
 #define MY_PORT 5003
@@ -98,23 +99,23 @@
 //#define MY_CONTROLLER_URL_ADDRESS "my.controller.org"
 
 // Enable inclusion mode
-//#define MY_INCLUSION_MODE_FEATURE
+#define MY_INCLUSION_MODE_FEATURE
 
 // Enable Inclusion mode button on gateway
-//#define MY_INCLUSION_BUTTON_FEATURE
+#define MY_INCLUSION_BUTTON_FEATURE
 // Set inclusion mode duration (in seconds)
-//#define MY_INCLUSION_MODE_DURATION 60
+#define MY_INCLUSION_MODE_DURATION 60
 // Digital pin used for inclusion mode button (D4 - GPIO2)
-//#define MY_INCLUSION_MODE_BUTTON_PIN D4
+#define MY_INCLUSION_MODE_BUTTON_PIN D4
 
 // Set blinking period
-//#define MY_DEFAULT_LED_BLINK_PERIOD 300
+#define MY_DEFAULT_LED_BLINK_PERIOD 300
 
 // Flash leds on rx/tx/err
 // Led pins used if blinking feature is enabled above
-//#define MY_DEFAULT_ERR_LED_PIN 16 // Error led pin (GPIO 16 - D0)
-//#define MY_DEFAULT_RX_LED_PIN D10 // Receive led pin (GPIO 1 - D10)
-//#define MY_DEFAULT_TX_LED_PIN D9  // the PCB, on board LED (GPIO 3 - D9)
+#define MY_DEFAULT_ERR_LED_PIN 16 // Error led pin (GPIO 16 - D0)
+#define MY_DEFAULT_RX_LED_PIN D10 // Receive led pin (GPIO 1 - D10)
+#define MY_DEFAULT_TX_LED_PIN D9  // the PCB, on board LED (GPIO 3 - D9)
 
 #include <MySensors.h>
 
