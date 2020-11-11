@@ -78,7 +78,7 @@
 
 // Set the hostname for the WiFi Client. This is the hostname
 // it will pass to the DHCP server if not static.
-#define MY_HOSTNAME "RFM69GW"
+#define MY_HOSTNAME "rfm69gw"
 
 // Enable MY_IP_ADDRESS here if you want a static ip address (no DHCP)
 //#define MY_IP_ADDRESS 192, 168, 1, 215
